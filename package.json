@@ -1,0 +1,22 @@
+{
+  "name": "cryptoguru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garshairv/CryptoGuru.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garshairv/CryptoGuru/issues"
+  },
+  "homepage": "https://github.com/garshairv/CryptoGuru#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
