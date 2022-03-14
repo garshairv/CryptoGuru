@@ -1,4 +1,4 @@
-const apiUrl = "https://api.api-ninjas.com/v1/cryptoprice?symbol=LTCBTC";
+const apiUrl = "http://localhost:2000";
 const symbol = "LTCBTC";
 const validationArea = document.getElementById("validation-area");
 const responseArea = document.getElementById("response-area");
@@ -15,11 +15,12 @@ document.getElementById("write-btn").onclick = function() {
         price = parseInt(price);
         validationArea.innerHTML = "";
         let requestObject = {name: name, price: price};
+        let params = `?name=${requestObject.name}&price=${requestObject.price}`;
         const xhttp = new XMLHttpRequest();
         xhttp.open("POST", apiUrl, true);
         xhttp.setRequestHeader("Content-Type", "application/json");
         xhttp.setRequestHeader("headers", {"X-API-Key" : "LCAI7w4plGGN4ytCYHhw2A==u1KYNraaqddRHd5N"})
-        xhttp.send(JSON.stringify(requestObject));
+        xhttp.send(params);
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 201) {
                 responseArea.innerHTML = `${name}:${price} was stored in the DB`;

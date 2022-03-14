@@ -21,6 +21,6 @@ app.post("/", (req, res) => {
     res.send("SUCCESS");
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 2000, () => {
     console.log("Listening");
 });
