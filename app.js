@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
+let url = require('url');
 
 app.use((req, res, next) => {
     res.append('Access-Control-Allow-Origin', ['*']);
     res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.append('Access-Control-Allow-Headers', 'Content-Type');
-    res.append({'X-Api-Key' : 'LCAI7w4plGGN4ytCYHhw2A==u1KYNraaqddRHd5N'}, 'headers');
     next();
 });
 
@@ -13,7 +13,7 @@ app.use(express.json( {extended: true}));
 
 app.get("/", (req, res) => {
     res.status(200);
-    res.send(JSON.stringify("TEST"));
+    res.send("asd");
 });
 
 app.post("/", (req, res) => {
