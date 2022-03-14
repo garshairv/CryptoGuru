@@ -1,0 +1,59 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Cryptoguru API Documentation",
+    "version": "v1"
+  },
+  "paths": {
+    "/getprice": {
+      "get": {
+        "operationId": "getPriceV1",
+        "summary": "Returns a price.",
+        "produces": [
+          "application/json"
+        ],
+        "responses" : {
+          "200": {
+            "description": "200 OK",
+            "examples": {
+              "application/json": {
+                "price": "$321.28"
+              }
+            }
+          },
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server"
+          }
+        }
+      }
+    },
+    "/postprice": {
+      "get": {
+        "operationId": "postPriceV1",
+        "summary": "Adds a price.",
+        "produces": [
+          "application/json"
+        ],
+        "responses" : {
+          "200": {
+            "description": "201 OK",
+            "examples": {
+              "application/json": {
+                "price": "$200.28"
+              }
+            }
+          },
+          "405": {
+            "description": "405 Invalid Input"
+          },
+          "500": {
+            "description": "500 Internal Server"
+          }
+        }
+      }
+    }
+  }
+}
